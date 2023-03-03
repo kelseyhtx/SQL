@@ -1,0 +1,23 @@
+create table store (id integer primary key, item text, color text, quantity integer, price_USD integer);
+
+insert into store values (1, "pants", "blue", 25, 40);
+insert into store values
+(2, "shirts", "white", 40, 25); 
+
+insert into store values (3, "socks", "white", 50, 5);
+insert into store values (4, "shoes", "black", 10, 50);
+insert into store values (5, "hats", "red", 25, 15);
+insert into store values (6, "necklaces", "gold", 10, 30);
+insert into store values (7, "earrings", "silver", 30, 20);
+insert into store values (8, "shorts", "blue", 20, 20);
+insert into store values (9, "skirts", "red", 15, 15);
+insert into store values (10, "dresses", "pink", 25, 20);
+insert into store values (11, "sweaters", "red", 20, 50);
+insert into store values (12, "sweatpants", "red", 20, 40);
+insert into store values (13, "sandals", "brown", 15, 30);
+insert into store values (14, "rings", "silver", 5, 50);
+insert into store values (15, "pajamas", "white", 20, 45);
+
+select * from store order by price_USD;
+
+select price_USD, sum(quantity) from store group by price_USD;
