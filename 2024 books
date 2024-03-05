@@ -1,0 +1,19 @@
+I love to read so I keep track of my books as a fun way to practice SQL!
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, title TEXT, author TEXT, rating INTEGER, pages INTEGER, start_date numeric, end_date numeric);
+
+insert into books values (1, 'Tom Lake', 'Ann Patchett', 3.5, 309, 12.24, 01.09);
+insert into books values (2, 'All Adults Here', 'Emma Straub', 4.5, 356, 1.07, 1.19);
+insert into books values (3, 'The Housemaid', 'Frieda McFadden', 2.5, 338, 1.22, 1.24);
+insert into books values (4, 'The Patron Saint of Liars', 'Ann Patchett', 4.5, 352, 1.24, 1.27);
+insert into books values (5, 'The Story Hour', 'Thrity Umrigar', 3, 336, 1.31, 2.09);
+insert into books values (6, 'Nightcrawling', 'Leila Mottley', 4.5, 277, 2.09, 2.13);
+insert into books values (7,'Perish', 'LaToya Watkins', 3, 336, 2.14, 2.19);
+insert into books values (8, 'Hello Beautiful', 'Ann Napolitano', 5, 416, 2.21, 2.24);
+
+SELECT sum(pages) from books;
+
+
+select * from books;
+
+select avg(rating) from books;
