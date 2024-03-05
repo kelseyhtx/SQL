@@ -1,3 +1,5 @@
+In this project, I used SQL to catergorize countries based on geographical facts.
+
 CREATE TABLE countries(
    name                    TEXT PRIMARY KEY,
    population              INTEGER,
