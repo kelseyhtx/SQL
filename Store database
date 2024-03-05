@@ -1,3 +1,5 @@
+In this project, I used a store database to practice math functions in SQL.
+
 create table store (id integer primary key, item text, color text, quantity integer, price_USD integer);
 
 insert into store values (1, "pants", "blue", 25, 40);
