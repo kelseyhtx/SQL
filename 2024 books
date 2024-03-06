@@ -10,10 +10,10 @@ insert into books values (5, 'The Story Hour', 'Thrity Umrigar', 3, 336, 1.31, 2
 insert into books values (6, 'Nightcrawling', 'Leila Mottley', 4.5, 277, 2.09, 2.13);
 insert into books values (7,'Perish', 'LaToya Watkins', 3, 336, 2.14, 2.19);
 insert into books values (8, 'Hello Beautiful', 'Ann Napolitano', 5, 416, 2.21, 2.24);
+insert into books values (9, 'I Found You', 'Lisa Jewell', 3, 352, 2.28, 3.05);
 
 SELECT sum(pages) from books;
-
-
+select avg(rating) from books;
 select * from books;
 
-select avg(rating) from books;
+
