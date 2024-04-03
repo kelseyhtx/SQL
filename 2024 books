@@ -14,6 +14,8 @@ insert into books values (9, 'I Found You', 'Lisa Jewell', 3, 352, 2.28, 3.05);
 insert into books values (10, 'Come and Get It', 'Kiley Reid', 4.5, 386, 3.11, 3.14);
 insert into books values (11, 'Convenience Store Woman', 'Sayaka Murata', 3.5, 163, 3.15, 3.16);
 insert into books values (12, 'The Chain', 'Adrian McKinty', 3.5, 357, 3.18, 3.21);
+insert into books values (13, 'She Started It', 'Sian Gilbert', 3.75, 342, 3.22, 3.25);
+insert into books values (14, 'Family Lore', 'Elizabeth Acevedo', 3, 371, 3.25, 4.2);
 
 SELECT sum(pages) from books;
 select avg(rating) from books;
