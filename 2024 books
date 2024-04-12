@@ -17,6 +17,7 @@ insert into books values (12, 'The Chain', 'Adrian McKinty', 3.5, 357, 3.18, 3.2
 insert into books values (13, 'She Started It', 'Sian Gilbert', 3.75, 342, 3.22, 3.25);
 insert into books values (14, 'Family Lore', 'Elizabeth Acevedo', 3, 371, 3.25, 4.2);
 insert into books values (15, 'Take My Hand', 'Dolen Perkins-Valdez', 4, 359, 4.03, 4.06);
+insert into books values (16, 'The Rachel Incident', 'Caroline O'Donoghue', 304. 4.08, 4.12);
 
 SELECT sum(pages) from books;
 select avg(rating) from books;
