@@ -21,6 +21,9 @@ insert into books values (16, 'The Rachel Incident', 'Caroline O'Donoghue', 4, 3
 insert into books values (17, 'The Great Alone', 'Kristin Hannah', 4.5, 435, 4.15, 4.23);
 insert into books values (18, 'Riding in Cars with Boys', 'Beverly Donofrio', 3, 204, 4.24, 4.28);
 insert into books values (19, 'Who We Are Now', 'Lauryn Chamberlain', 4.25, 352, 4.29, 5.03);
+insert into books values (20, 'Demon Copperhead', 'Barbara Kingsolver', 3.5, 548, 5.04, 5.18);
+insert into books values (21, 'Boy Parts', 'Eliza Clark', 4, 297, 5.19, 5.19);
+
 
 SELECT sum(pages) from books;
 select avg(rating) from books;
