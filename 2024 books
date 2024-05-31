@@ -23,6 +23,7 @@ insert into books values (18, 'Riding in Cars with Boys', 'Beverly Donofrio', 3,
 insert into books values (19, 'Who We Are Now', 'Lauryn Chamberlain', 4.25, 352, 4.29, 5.03);
 insert into books values (20, 'Demon Copperhead', 'Barbara Kingsolver', 3.5, 548, 5.04, 5.18);
 insert into books values (21, 'Boy Parts', 'Eliza Clark', 4, 297, 5.19, 5.19);
+insert into books values (22, 'Friends From Home', 'Lauryn Chamberlain', 304, 5.20, 5.22);
 
 
 SELECT sum(pages) from books;
