@@ -28,3 +28,12 @@ select customers.FirstName, customers.LastName, invoices.invoiceid, invoices.Inv
 from chinook.customers
 JOIN chinook.invoices ON customers.customerID = invoices.customerID;
 
+4. Show the Employees who are Sales Agents
+
+select  EmployeeId, FirstName, Lastname, title
+FROM employees 
+WHERE title LIKE 'Sales Support Agent';
+
+5. Find a unique/distinct list of billing countries from the Invoice table.
+
+select DISTINCT  Billingcountry from invoices;
