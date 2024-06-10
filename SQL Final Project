@@ -1,0 +1,30 @@
+This project was completed using a data set called 'chinook' from Break Into Tech which inludes the following data:
+
+"employees table stores employees data such as employee id, last name, first name, etc. It also has a field named ReportsTo to specify who reports to whom.
+ customers table stores customers data. The line between employees.Employeeid and customers.SupportRepID shows how the two tables are related (ie, how you would JOIN them).
+ The invoices table stores invoice header data (Customer ID, Billing Address, etc) and the invoice_items table stores the invoice line items data (Unit Price, Quantity).
+ artists table stores artists data.
+ albums table stores data about a list of tracks. Each album belongs to one artist. However, one artist may have multiple albums.
+ media_types table stores media types such as MPEG audio and AAC audio files.
+ genres table stores music types such as rock, jazz, metal, etc.
+ tracks table stores the data of songs. Each track belongs to one album.
+ playlists table store data about playlists. Each playlist contains a list of tracks. Each track may belong to multiple playlists. The relationship between the playlists table and tracks table is many-to-many. The playlist_track table is used to reflect this relationship"
+
+SQL Questions:
+
+1. Show Customers (their full names, customer ID, and country) who are not in the US.
+
+select FirstName, LastName, customerID, Country
+FROM chinook.customers WHERE country <> 'United States';
+
+2. Show only the Customers from Brazil.
+
+select FirstName, LastName, customerID, Country
+FROM chinook.customers WHERE country = 'Brazil';
+
+3. Find the Invoices of customers who are from Brazil. The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
+
+select customers.FirstName, customers.LastName, invoices.invoiceid, invoices.InvoiceDate, invoices.BillingCountry
+from chinook.customers
+JOIN chinook.invoices ON customers.customerID = invoices.customerID;
+
