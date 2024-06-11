@@ -72,4 +72,10 @@ select tracks.Name AS track_name, invoice_items.InvoiceLineId
 FROM invoice_items
 JOIN tracks on tracks.TrackId = invoice_items.TrackId;
 
+11. select tracks.Name AS track_name, artists.Name AS artist_name, invoice_items.InvoiceLineId
+FROM invoice_items
+JOIN tracks on invoice_items.TrackId = tracks.TrackId
+JOIN albums on albums.AlbumId = tracks.AlbumId
+JOIN artists on artists.artistID = albums.ArtistId;
+
 
