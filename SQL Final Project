@@ -53,3 +53,23 @@ from invoice_items
 JOIN invoices ON invoice_items.InvoiceLineID = invoices.InvoiceId
 JOIN customers ON invoices.customerID = customers.CustomerId
 JOIN employees ON customers.SupportRepID = employees.employeeID;
+
+8. How many Invoices were there in 2009?
+
+select count(*) from invoices
+WHERE InvoiceDate LIKE '%2009%';
+
+9. What are the total sales for 2009?
+
+select sum (invoice_items.Quantity * invoice_items.UnitPrice) 
+FROM invoice_items
+JOIN invoices on invoice_items.InvoiceLineId = invoices.InvoiceId
+WHERE invoices.InvoiceDate LIKE '%2009%';
+
+10. Write a query that includes the purchased track name with each invoice line ID
+
+select tracks.Name AS track_name, invoice_items.InvoiceLineId
+FROM invoice_items
+JOIN tracks on tracks.TrackId = invoice_items.TrackId;
+
+
