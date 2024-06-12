@@ -78,4 +78,52 @@ JOIN tracks on invoice_items.TrackId = tracks.TrackId
 JOIN albums on albums.AlbumId = tracks.AlbumId
 JOIN artists on artists.artistID = albums.ArtistId;
 
+12. Provide a query that shows all the Tracks, and include the Album name, Media type, and Genre.
 
+select tracks.name as track_name, albums.title as album_title, media_types.name as media_type, genres.name as genre
+FROM tracks
+JOIN albums on tracks.albumid = albums.albumid
+JOIN media_types on tracks.mediatypeID = media_types.mediatypeID
+JOIN genres on tracks.genreid = genres.genreid
+order by track_name;
+
+13. Show the total sales made by each sales agent.BIT_DB
+
+SELECT 
+    e.employeeID,
+    e.firstname,
+    e.lastname,
+    SUM(ii.UnitPrice * ii.Quantity) AS total_sales
+FROM 
+    employees e
+JOIN 
+    customers c ON e.employeeID = c.supportRepID
+JOIN 
+    invoices i ON c.CustomerID = i.CustomerID
+JOIN 
+    invoice_items ii ON i.invoiceid = ii.invoiceid
+GROUP BY 
+    e.employeeID, e.firstname, e.lastname
+ORDER BY 
+    total_sales DESC;
+
+14. Show the total sales made by each sales agent.BIT_DB
+
+SELECT 
+    e.employeeID,
+    e.firstname,
+    e.lastname,
+    SUM(ii.UnitPrice * ii.Quantity) AS total_sales
+FROM 
+    employees e
+JOIN 
+    customers c ON e.employeeID = c.supportRepID
+JOIN 
+    invoices i ON c.CustomerID = i.CustomerID
+JOIN 
+    invoice_items ii ON i.invoiceid = ii.invoiceid
+GROUP BY 
+    e.employeeID, e.firstname, e.lastname
+ORDER BY 
+    total_sales DESC
+    LIMIT 1;    
